@@ -8,8 +8,22 @@ body{
     color: darkseagreen;
 }
 
+.flex-container{
+    display: flex;
+    justify-content: center;
+    background-color: palegreen;
+}
+
+.flex-container > div{
+background-color: gainsboro;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+
+}
+
 img{
     width:100%;
-    max-width: 300px;
+    max-width: 200px;
     height:100%;
 }
