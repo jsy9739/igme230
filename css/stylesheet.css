@@ -93,3 +93,7 @@ a {
 a:hover {
     color: lightblue;
 }
+
+.myDIV {
+    display: none;
+}
