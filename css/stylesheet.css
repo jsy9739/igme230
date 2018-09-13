@@ -63,4 +63,9 @@ h3 {
 
 a {
     color: darkseagreen;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: lightgreen;
 }
