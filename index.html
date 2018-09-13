@@ -26,7 +26,28 @@
         <div class="coursework">
             <h2>IGME 230 Coursework</h2>
             <h3>Current In-Class Exercise</h3>
+            <li class="current"><a href="jsy9739.github.io/igme230/week3a">Week 3a</a></li>
             <h3>Past In-Class Exercises</h3>
+
+
+            <button onclick="myFunction()" class="button"></button>
+
+            <div id="myDIV">
+                <ol>
+                    <li><a href="url">Past exercise......................09/12/18</a></li>
+                    <li><a href="url">Past exercise......................09/10/18</a></li>
+                </ol>
+            </div>
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myDIV");
+                    if (x.style.display === "none") {
+                        x.style.display = "block";
+                    } else {
+                        x.style.display = "none";
+                    }
+                }
+            </script>
         </div>
     </div>
 </body>

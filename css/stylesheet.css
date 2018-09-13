@@ -7,7 +7,7 @@ body {
     display: flex;
     min-height: 100vh;
     font-size: 14px;
-    font-family: 'Roboto';
+    font-family: 'Lato';
     line-height: 1.6;
     /*    color: darkseagreen;*/
     align-items: center;
@@ -24,10 +24,9 @@ body {
 .flex-container > div {
     /*background-color: gainsboro;*/
     width: 300px;
+    min-height: 300px;
     margin: 10px;
     text-align: center;
-
-
 }
 
 img {
@@ -41,6 +40,29 @@ img {
     padding-left: 20px;
     padding-right: 20px;
 
+
+}
+
+.current {
+    list-style: none;
+
+}
+
+ol {
+    text-align: left;
+}
+
+.button {
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    border-color: darkseagreen;
+}
+
+.button:hover {
+    border-color: lightblue;
 }
 
 h1 {
@@ -67,5 +89,5 @@ a {
 }
 
 a:hover {
-    background-color: green;
+    color: lightblue;
 }
