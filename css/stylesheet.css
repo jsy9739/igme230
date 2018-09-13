@@ -44,12 +44,6 @@ img {
 
 }
 
-.current {
-    /*    gets rid of bullets*/
-    list-style: none;
-
-}
-
 ol {
     text-align: left;
 }
@@ -84,7 +78,7 @@ h3 {
 }
 
 .projects {
-    padding-top: 30px;
+    padding-top: 10px;
     list-style: none;
 }
 
