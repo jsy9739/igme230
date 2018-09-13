@@ -13,6 +13,7 @@ body {
     align-items: center;
 }
 
+/* container for flexbox*/
 .flex-container {
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@ body {
 
 .flex-container > div {
     /*background-color: gainsboro;*/
-    width: 300px;
+    width: 310px;
     min-height: 270px;
     margin: 10px;
     text-align: center;
@@ -44,6 +45,7 @@ img {
 }
 
 .current {
+    /*    gets rid of bullets*/
     list-style: none;
 
 }
@@ -53,6 +55,7 @@ ol {
 }
 
 .button {
+    /*    makes n arrow pointing down*/
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3.5px;
