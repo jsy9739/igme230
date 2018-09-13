@@ -24,7 +24,7 @@ body {
 .flex-container > div {
     /*background-color: gainsboro;*/
     width: 300px;
-    min-height: 300px;
+    min-height: 270px;
     margin: 10px;
     text-align: center;
 }
@@ -94,6 +94,6 @@ a:hover {
     color: lightblue;
 }
 
-.myDIV {
+#myDIV {
     display: none;
 }
