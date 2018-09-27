@@ -28,17 +28,13 @@ img {
 }
 
 h3,
-nav {
+nav a{
     background-color: lightgray;
     padding: 8px;
     margin-top: 7px;
     width: 100%;
 
-    display:block (h3, nav a {
-        ...
-    }
-
-    )
+    display:block
 }
 
 aside {
@@ -46,3 +42,17 @@ aside {
     padding: 15 px;
     margin-top: 7px;
 }
+
+@media screen and (min-width: 620px) {
+    aside, nav{
+        float: left;
+        width: 20x;
+    }
+
+    article{
+        float: left;
+        width: 60%;
+        padding: 0 20px;
+    }
+}
+
