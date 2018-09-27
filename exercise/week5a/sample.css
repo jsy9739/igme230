@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+article,
+aside {
+    width: 100%;
+}
+
+header {
+    background-color: lightgrey;
+    padding: 8px;
+}
+
+h1,
+h2,
+nav {
+    text-align: center;
+}
+
+nav {
+    overflow: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+h3,
+nav {
+    background-color: lightgray;
+    padding: 8px;
+    margin-top: 7px;
+    width: 100%;
+
+    display:block (h3, nav a {
+        ...
+    }
+
+    )
+}
+
+aside {
+    background-color: lightgray;
+    padding: 15 px;
+    margin-top: 7px;
+}
