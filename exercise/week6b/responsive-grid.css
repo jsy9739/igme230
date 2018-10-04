@@ -31,6 +31,12 @@ body {
     color: red;
 }
 
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250,1fr));
+    grid-gap: .5rem;
+}
+
 /**************
 Grid Formatting
 **************/
