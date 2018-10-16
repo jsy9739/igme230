@@ -104,3 +104,7 @@ main img:hover { transform: scale(1.2); }
     0%{transform: rotate(0turn);}
     100%{transform: rotateY(360deg);}
 }
+
+a:hover .fa {
+    animation: spin .5s linear both;
+    }
