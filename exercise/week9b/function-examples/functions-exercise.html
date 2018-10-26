@@ -32,16 +32,12 @@
         <h2>My Favorite Colors</h2>
 
         <ol id="colorsList">
-
         </ol>
 
         <h2>My Favorite Foods</h2>
 
         <ol id="foodsList">
-
         </ol>
-        createList(colorsList, colors);
-        createList(lfoodsList, foods);
 
     </main>
 
@@ -59,6 +55,19 @@
         newListItem.innerHTML = arrVal;
         // Assign orderedList to favorite colors/foods in <main>
         let orderedList = document.querySelector('ol:nth-of-type(1)');
+        // Add list and array value into orderedList
+        orderedList.appendChild(newListItem, arrVal);
+        }
+
+        for(var i = 0; i < foods.length; i++) {
+        // retrieve the values from the arrays
+        let arrVal = foods[i];
+        // Generate new list item
+        let newListItem = document.createElement("li");
+        // Insert array value (favorite foods/whatnot) for that item
+        newListItem.innerHTML = arrVal;
+        // Assign orderedList to favorite colors/foods in <main>
+        let orderedList = document.querySelector('ol:nth-of-type(2)');
         // Add list and array value into orderedList
         orderedList.appendChild(newListItem, arrVal);
         }
