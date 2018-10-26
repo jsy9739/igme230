@@ -46,31 +46,51 @@
         let colors = ["green", "blue", "black"]; // add some colors
         let foods = ["sushi", "ice cream", "mangos"]; // add some foods
 
-        for(var i = 0; i < colors.length; i++) {
-        // retrieve the values from the arrays
-        let arrVal = colors[i];
-        // Generate new list item
-        let newListItem = document.createElement("li");
-        // Insert array value (favorite foods/whatnot) for that item
-        newListItem.innerHTML = arrVal;
-        // Assign orderedList to favorite colors/foods in <main>
-        let orderedList = document.querySelector('ol:nth-of-type(1)');
-        // Add list and array value into orderedList
-        orderedList.appendChild(newListItem, arrVal);
-        }
+        //        for(var i = 0; i < colors.length; i++) {
+        //        // retrieve the values from the arrays
+        //        let arrVal = colors[i];
+        //        // Generate new list item
+        //        let newListItem = document.createElement("li");
+        //        // Insert array value (favorite foods/whatnot) for that item
+        //        newListItem.innerHTML = arrVal;
+        //        // Assign orderedList to favorite colors/foods in <main>
+        //        let orderedList = document.querySelector('ol:nth-of-type(1)');
+        //        // Add list and array value into orderedList
+        //        orderedList.appendChild(newListItem, arrVal);
+        //        }
+        //
+        //        for(var i = 0; i < foods.length; i++) {
+        //        // retrieve the values from the arrays
+        //        let arrVal = foods[i];
+        //        // Generate new list item
+        //        let newListItem = document.createElement("li");
+        //        // Insert array value (favorite foods/whatnot) for that item
+        //        newListItem.innerHTML = arrVal;
+        //        // Assign orderedList to favorite colors/foods in <main>
+        //        let orderedList = document.querySelector('ol:nth-of-type(2)');
+        //        // Add list and array value into orderedList
+        //        orderedList.appendChild(newListItem, arrVal);
+        //        }
+        function createList(listElement, array) {
+            for (var i = 0; i < array.length; i++) {
+                // retrieve the values from the arrays
+                let arrVal = array[i];
+                // Generate new list item
+                let newListItem = document.createElement("li");
+                // Insert array value (favorite foods/whatnot) for that item
+                newListItem.innerHTML = arrVal;
+                // Assign orderedList to favorite colors/foods in <main>
 
-        for(var i = 0; i < foods.length; i++) {
-        // retrieve the values from the arrays
-        let arrVal = foods[i];
-        // Generate new list item
-        let newListItem = document.createElement("li");
-        // Insert array value (favorite foods/whatnot) for that item
-        newListItem.innerHTML = arrVal;
-        // Assign orderedList to favorite colors/foods in <main>
-        let orderedList = document.querySelector('ol:nth-of-type(2)');
-        // Add list and array value into orderedList
-        orderedList.appendChild(newListItem, arrVal);
+                let colorsList = 'ol:nth-of-type(1)';
+                let foodsList = 'ol:nth-of-type(2)';
+
+                let orderedList = document.querySelector(listElement);
+                // Add list and array value into orderedList
+                orderedList.appendChild(newListItem, arrVal);
+            }
         }
+        createList(colorsList, colors);
+        createList(foodsList, foods);
     </script>
 
 </body>
