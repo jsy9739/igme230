@@ -6,9 +6,23 @@
     <title>Week 9 Homework</title>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
-       html { font-family: Lato; font-size: 16px; }
-       main { max-width: 800px; margin: 0 auto; border: 1px dotted black; padding: 0 10px;} h1 { font-weight: 900;}
-   </style>
+
+        html {
+            font-family: Lato;
+            font-size: 16px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px dotted black;
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-weight: 900;
+        }
+    </style>
 
 </head>
 
@@ -26,13 +40,28 @@
         <ol id="foodsList">
 
         </ol>
+        createList(colorsList, colors);
+        createList(lfoodsList, foods);
 
-      </main>
+    </main>
 
     <script>
         "use strict";
-        let colors = []; // add some colors
-        let foods = []; // add some foods
+        let colors = ["green", "blue", "black"]; // add some colors
+        let foods = ["sushi", "ice cream", "mangos"]; // add some foods
+
+        for(var i = 0; i < colors.length; i++) {
+        // retrieve the values from the arrays
+        let arrVal = colors[i];
+        // Generate new list item
+        let newListItem = document.createElement("li");
+        // Insert array value (favorite foods/whatnot) for that item
+        newListItem.innerHTML = arrVal;
+        // Assign orderedList to favorite colors/foods in <main>
+        let orderedList = document.querySelector('ol:nth-of-type(1)');
+        // Add list and array value into orderedList
+        orderedList.appendChild(newListItem, arrVal);
+        }
     </script>
 
 </body>
