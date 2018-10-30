@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Events Exercise</title>
-	<style>
-           @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+    <meta charset="utf-8" />
+    <title>Events Exercise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
 
 		html {
 			font-family:Lato, sans-serif;
@@ -29,24 +29,38 @@
 		}
 	</style>
 </head>
+
 <body>
 
-<div id="colorform">
-	<legend>Choose your favorite color!</legend>
-	<p><input type="radio" name="colorGroup" value="red" /> Red</p>
-	<p><input type="radio" name="colorGroup" value="green" /> Green</p>
-	<p><input type="radio" name="colorGroup" value="blue" /> Blue</p>
-	<p><button id="colorButton" type="button">Submit</button></p>
-	<p id="info"></p>
-</div>
+    <div id="colorform">
+        <legend>Choose your favorite color!</legend>
+        <p><input type="radio" name="colorGroup" value="red" /> Red</p>
+        <p><input type="radio" name="colorGroup" value="green" /> Green</p>
+        <p><input type="radio" name="colorGroup" value="blue" /> Blue</p>
+        <p><button id="colorButton" type="button">Submit</button></p>
+        <p id="info"></p>
+    </div>
 
-<script>
-/* Write your code here! */
-    let response = document.querySelector("#info");
-    let legend = document.querySelector("#colorform legend");
-    let submit = document.querySelector("#colorform button");
-    let buttons = document.querySelectorAll("input[name='colorGroup']");
+    <script>
+        /* Write your code here! */
+        let response = document.querySelector("#info");
+        let legend = document.querySelector("#colorform legend");
+        let submit = document.querySelector("#colorform button");
+        let buttons = document.querySelectorAll("input[name='colorGroup']");
+        let currentColor = "black";
 
-</script>
+        for (let button of buttons) {
+            button.addEventListener("click", function() {
+                currentColor = this.value;
+                response.innerHTML = `You chose ${currentColor}`;
+            })
+        };
+
+        submit.onclick = function(e) {
+            response.inerHTML = `Your final answer is ${currentColor}`;
+            legend.style.color = color;
+        };
+
+    </script>
 </body>
 </html>
