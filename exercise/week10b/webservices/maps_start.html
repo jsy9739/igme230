@@ -28,6 +28,12 @@
         // create a new map with the specified options (uses deprecated getElementByID; could use querySelector instead)
         var myMap = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
+          var myMarker = new google.maps.Marker({
+    position: latlng,
+    map: myMap
+    });
+
+
       });
 
     } else {  // alternate content if the browser couldn't get position (old browser, or user refused)
