@@ -62,7 +62,8 @@
             grid-column-start: 3;
             padding-right: 1em;
             justify-self: left;
-            max-width: 20rem;;
+            max-width: 20rem;
+            ;
         }
 
         #colorChooser {
@@ -108,9 +109,20 @@
         </div>
     </div>
     <script>
+        const numCols = 30; // specify pixel grid columns
+        const numRows = 20; // specify pixel grid rows
+        const cellSize = 25; // specify dimension of cell square in px
+        const numCells = numCols * numRows; // calculate total number of cells
+
+        let pixelgrid = documentSelector("pixelgrid");
+        pixelgrid.style.gridTemplateColumns = `repeat(${numCols},${cellSize}px)`;
+        pixelgrid.style.gridTemplateRows = `repeat(${numCols},${cellSize}px)`;
 
 
 
+        ``
+        `javascript
+    $("#pixelGrid").append('<span class="cell"></span>');
     </script>
 </body>
 
