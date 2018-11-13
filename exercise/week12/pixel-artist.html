@@ -116,21 +116,50 @@
         const cellSize = 25; // specify dimension of cell square in px
         const numCells = numCols * numRows; // calculate total number of cells
 
-        let pixelgrid =  document.querySelector("#pixelGrid");
+        let pixelgrid = document.querySelector("#pixelGrid");
 
         pixelgrid.style.gridTemplateColumns = `repeat(${numCols},${cellSize}px)`;
         pixelgrid.style.gridTemplateRows = `repeat(${numCols},${cellSize}px)`;
 
 
 
-        for (let i=0; i< numCells; i++){
+        for (let i = 0; i < numCells; i++) {
             $("#pixelGrid").append('<span class="cell"></span>');
         }
 
-        let color = $("putmenuselectorhere").val();
-console.log(color);
+        let color = $("#colorChooser").val();
+        console.log(color);
+
+        $("#colorChooser").change(function() {
+            color = $(this).val();
+            console.log(color);
+
+        });
+
+        $(".cell").click(function() {
+            $(this).css("background-color", color);
+        });
 
 
+        $(".cell").mousedown(function() {
+            event.preventDefault();
+            $(this).css("background-color", color);
+        });
+
+        $(".cell").mousedown(function() {
+            event.preventDefault();
+            $(this).css("background-color", color);
+            $(".cell").mouseover(function() {
+                $(this).css("background-color", color);
+            });
+        });
+
+        $(".cell").unbind("event");
+
+
+        $(document).mouseup(function () {
+    $(".cell").unbind("mouseover");
+});
     </script>
 </body>
 
