@@ -86,7 +86,9 @@
 <body>
     <div id="wrapper">
         <h1>Pixel ArTeur</h1>
-        <div id="pixelGrid"></div>
+        <div id="pixelGrid">
+
+        </div>
 
         <div id="instructions">
             <p>Select a color, then click or drag across squares to change them to that color.</p>
@@ -114,15 +116,21 @@
         const cellSize = 25; // specify dimension of cell square in px
         const numCells = numCols * numRows; // calculate total number of cells
 
-        let pixelgrid = documentSelector("pixelgrid");
+        let pixelgrid =  document.querySelector("#pixelGrid");
+
         pixelgrid.style.gridTemplateColumns = `repeat(${numCols},${cellSize}px)`;
         pixelgrid.style.gridTemplateRows = `repeat(${numCols},${cellSize}px)`;
 
 
 
-        ``
-        `javascript
-    $("#pixelGrid").append('<span class="cell"></span>');
+        for (let i=0; i< numCells; i++){
+            $("#pixelGrid").append('<span class="cell"></span>');
+        }
+
+        let color = $("putmenuselectorhere").val();
+console.log(color);
+
+
     </script>
 </body>
 
