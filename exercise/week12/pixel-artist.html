@@ -158,7 +158,14 @@
 
 
         $(document).mouseup(function () {
+                   event.preventDefault();
     $(".cell").unbind("mouseover");
+            
+                $("#reset").click(function() {
+            for (i = 0; i < numCells; i++) {
+                $(".cell").css("background-color", "silver");
+            }
+        });
 });
     </script>
 </body>
