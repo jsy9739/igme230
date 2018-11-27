@@ -91,6 +91,13 @@
             verseRequest.send(); // actually sends the request
         };
 
+        verseChoose.onchange = function() {
+            verse = verseChoose.value;
+            updateVerse(verse);
+        };
+
+        verseChoose.value = verse; // shows initial menu option
+        updateVerse(verse); // shows intial content
     </script>
 </body>
 
