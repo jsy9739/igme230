@@ -50,7 +50,6 @@
             font-style: italic;
             font-size: 1.1rem;
         }
-
     </style>
 
 </head>
@@ -92,9 +91,9 @@
 
         $("#verse-choose").change(function() {
             verse = $(this).val();
-            $("#selectedverse").load(verse);
+            $("#selectedverse").load(verseString);
+            verseString = (poem + " #" + verse);
         });
-
     </script>
 </body>
 
