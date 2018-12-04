@@ -15,7 +15,6 @@
         <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
 
         <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
-        <h1>Jaymart's Contact Form</h1>
 
         <input type="hidden" name="recipients" value="jsy9739@rit.edu" />
 
@@ -23,24 +22,26 @@
 
         <input type="hidden" name="subject" value="Test Mail from Contact Form" />
 
+        <h1>Your Name's Contact Form</h1>
+
         <fieldset>
-            <legend>jsy9739@rit.edu</legend>
+            <legend>Your Contact Information</legend>
 
             <div class="inputs">
-                <label for="fullname">Jaymart Yabo:</label>
-                <input type="text" name="fullname" size="30">
+                <label for="fullname">Your Full Name:</label>
+                <input type="text" name="FullName" size="30">
             </div>
 
             <div class="inputs">
-                <label for="useremail">jsy9739@rit.edu:</label>
-                <input type="email" name="useremail" pattern=".+rit.edu" size="30">
+                <label for="useremail">Your RIT Email:</label>
+                <input type="email" name="EmailAddr" pattern=".+rit.edu" size="30">
             </div>
 
         </fieldset>
 
         <div id="commentsection">
             <label for="comments">Comments:</label>
-            <textarea name="comments">Put your comments here...</textarea>
+            <textarea name="mesg">Put your comments here...</textarea>
         </div>
 
         <label for="response">Would You Like a Response?</label>
