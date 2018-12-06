@@ -37,12 +37,14 @@ Your Formatting
 
 #mygrid {
     display: grid;
-    grid-template-rows: 75px 30px 1fr 1fr 50px;
+    grid-template-rows: 75px 30px 1fr 2fr 50px;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
         "header header"
-        "aside article nav"
-        "footer footer footer"
+        "nav nav"
+        "aside article"
+        "extraC article"
+        "footer footer";
     ;
     width: 90vw;
     max-width: 1000px;
@@ -52,68 +54,77 @@ Your Formatting
 
 header {
     grid-area: header;
+    background: lightpink;
 
 }
 
 nav {
     grid-area: nav;
+    background-color: lavenderblush;
 }
 
 article {
     grid-area: article;
+    background: lightcyan;
+/*    grid-row: span 2/5;*/
 }
 
 aside {
     grid-area: aside;
+        background-color: lightblue;
 }
 
 footer {
     grid-area: footer;
+      background: lightpink;
 }
 
-/*
+#extracredit{
+    grid-area: extraC;
+     background-color: lightblue;
+}
+
 header,
-footer {
+footer, nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-*/
 
-/*
-.menuitem {
-    background: white;
-    margin: 0;
-    border-top: 1px solid white;
+.top {
+    background: #ccc;
+    width: 6rem;
+    text-align: center;
 
 }
 
-.submenu {
+.list {
     list-style: none;
     margin: 0;
     padding: 0;
     display: none;
+
 }
 
-.submenu li {
+.list li {
     padding: .25rem;
-    background: lightgrey;
+  background: #ddd;
 }
-*/
 
 /*Mobile Grid Layout*/
 @media screen and (max-width: 760px) {
     #mygrid {
         width: 100vw;
         grid-template-columns: 1fr;
-        grid-template-rows: 75px 30px 1fr 1fr 30px;
+        grid-template-rows: 75px 30px 1fr 1fr 1fr 30px;
         grid-template-areas:
             "header"
             "nav"
             "article"
             "aside"
+            "extraC"
             "footer"
         ;
-        min-height: 0;
+/*        min-height: 0;*/
     }
 }
