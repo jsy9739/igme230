@@ -8,17 +8,17 @@ $(".menubox").click(function () {
 })
 
 //AJAX
+//initialize variable "content" with the text
 let content = ("content1.txt");
+
+//select content menu and get its value which the variable you inialized
 $("#choose-content").val(content);
+
+//load the text
 $("#content").load(content);
 
+//choose the other option by changing the value of content then loading it
 $("#choose-content").change(function () {
     content = $(this).val();
     $("#content").load(content);
 });
-
-
-/* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("submenu");
-}

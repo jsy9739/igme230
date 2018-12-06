@@ -41,19 +41,17 @@ Your Formatting
 
 #wrapper {
     display: grid;
-    width: 90vw;
-    max-width: 1200px;
-    min-height: 100vh;
-    grid-row: 4rem 1fr 3rem;
-    grid-column: 1fr 2fr 200px;
+    grid-template-rows: 4rem 1fr 3rem;
+    grid-template-columns: 1fr 2fr 200px;
     grid-template-areas:
         "header header header"
         "aside article nav"
         "footer footer footer"
     ;
-
-
-
+    width: 90vw;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
 }
 
 header {
@@ -77,25 +75,28 @@ footer {
     grid-area: footer;
 }
 
-header, footer{
+header,
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.menuitem{
+.menuitem {
     background: white;
     margin: 0;
+    border-top: 1px solid white;
+
 }
 
-.submenu{
+.submenu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: none;
 }
 
-.submenu li{
+.submenu li {
     padding: .25rem;
     background: lightgrey;
 }
@@ -103,8 +104,9 @@ header, footer{
 /*Mobile Grid Layout*/
 @media screen and (max-width: 760px) {
     #wrapper {
-        width: 100vh;
-        grid-auto-columns:1fr;
+        width: 100vw;
+        grid-template-columns: 100vw;
+        grid-template-rows: 1fr;
         grid-template-areas:
             "header"
             "nav"
@@ -112,5 +114,6 @@ header, footer{
             "aside"
             "footer"
         ;
+        min-height: 0;
     }
 }
