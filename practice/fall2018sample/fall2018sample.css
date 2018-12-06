@@ -29,7 +29,8 @@ article {
     padding: .5rem;
 }
 
-nav, aside {
+nav,
+aside {
     background-color: #b5e7a0;
 }
 
@@ -38,25 +39,78 @@ nav, aside {
 Your Formatting
 ***************/
 
-#wrapper{
+#wrapper {
     display: grid;
     width: 90vw;
     max-width: 1200px;
     min-height: 100vh;
+    grid-row: 4rem 1fr 3rem;
+    grid-column: 1fr 2fr 200px;
+    grid-template-areas:
+        "header header header"
+        "aside article nav"
+        "footer footer footer"
+    ;
+
 
 
 }
 
-@media screen and (min-width: 760px) {
-    #wrapper{
-    width:100%;
-    grid-auto-columns: 1 1fr;
-    grid-auto-rows: auto;
-    grid-area:
-        header,
-        nav,
-        article,
-        aside,
-        footer;
+header {
+    grid-area: header;
+
+}
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: article;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+header, footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuitem{
+    background: white;
+    margin: 0;
+}
+
+.submenu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.submenu li{
+    padding: .25rem;
+    background: lightgrey;
+}
+
+/*Mobile Grid Layout*/
+@media screen and (max-width: 760px) {
+    #wrapper {
+        width: 100vh;
+        grid-auto-columns:1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "aside"
+            "footer"
+        ;
     }
 }
