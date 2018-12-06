@@ -1,0 +1,119 @@
+/*****************
+General Formatting
+******************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+article,
+aside {
+    padding: .5rem;
+}
+
+#extracredit {
+    width: 75%;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+}
+
+
+/**************
+Your Formatting
+***************/
+
+#mygrid {
+    display: grid;
+    grid-template-rows: 75px 30px 1fr 1fr 50px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "header header"
+        "aside article nav"
+        "footer footer footer"
+    ;
+    width: 90vw;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+header {
+    grid-area: header;
+
+}
+
+nav {
+    grid-area: nav;
+}
+
+article {
+    grid-area: article;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/*
+header,
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/
+
+/*
+.menuitem {
+    background: white;
+    margin: 0;
+    border-top: 1px solid white;
+
+}
+
+.submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.submenu li {
+    padding: .25rem;
+    background: lightgrey;
+}
+*/
+
+/*Mobile Grid Layout*/
+@media screen and (max-width: 760px) {
+    #mygrid {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 75px 30px 1fr 1fr 30px;
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "aside"
+            "footer"
+        ;
+        min-height: 0;
+    }
+}
