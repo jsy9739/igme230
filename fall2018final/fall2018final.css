@@ -61,6 +61,7 @@ header {
 nav {
     grid-area: nav;
     background-color: lavenderblush;
+    z-index: 1;
 }
 
 article {

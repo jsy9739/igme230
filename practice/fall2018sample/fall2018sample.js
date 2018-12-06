@@ -22,3 +22,5 @@ $("#choose-content").change(function () {
     content = $(this).val();
     $("#content").load(content);
 });
+
+
