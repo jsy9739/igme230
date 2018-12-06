@@ -6,18 +6,18 @@ $("nav div").click(function () {
 });
 
 
-let content = ("article0.txt");
+let article = ("article0.txt");
 
 
-$("#story").val(content);
+$("#story").val(article);
 
 
-$("#content").load(content);
+$("#article").load(article);
 
 
 $("#story").change(function () {
-    content = $(this).val();
-    $("#content").load(content);
+    article = $(this).val();
+    $("#article").load(article);
 });
 
 $("extracredit").click(function incrementValue()
