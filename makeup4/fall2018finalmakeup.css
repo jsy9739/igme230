@@ -42,17 +42,36 @@ section, header, footer {
 /**************
 Your Formatting
 ***************/
+#pagegrid {
+    display: grid;
+    width: 95vw;
+    max-width: 1100px;
+    min-height: 100vh;
+    grid-template-columns: 200px 2fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 30px;
+    grid-template-areas:
+        "header header header"
+        "nav story source"
+        "nav story extracredit"
+        "footer footer footer";
+    margin: 0 auto;
+
+}
+
 
 header{
     grid-area: header;
+    background: lightblue;
 }
 
 #story{
     grid-area: story;
+    background: lightcyan;
 }
 
 #source{
     grid-area: source;
+    background: lightsalmon;
 }
 
 #extracredit{
@@ -61,10 +80,25 @@ header{
 
 nav{
     grid-area: nav;
+    background: lavenderblush;
 }
 
 footer{
     grid-area: footer;
+    background: lightblue;
+
+}
+
+header, footer{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a:hover{
+    background: lightpink;
+    color: magenta;
+    cursor: pointer;
 }
 
 
@@ -72,9 +106,10 @@ footer{
 /*Mobile Grid Layout*/
 @media screen and (max-width: 760px) {
     #pagegrid {
+          display: grid;
         width: 100vw;
         grid-template-columns: 1fr;
-        grid-template-rows: 80px auto auto auto auto 30px;
+        grid-template-rows: 80px 1fr 1fr 1fro 1fr 30px;
         grid-template-areas:
             "header"
             "story"
