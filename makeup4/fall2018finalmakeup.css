@@ -1,0 +1,87 @@
+/*****************
+General Formatting
+******************/
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+section, header, footer {
+    padding: .5rem;
+}
+
+.menu {
+    width: 100%;
+    padding: .5rem;
+    background-color: #aaa;
+    margin: 1px;
+}
+
+.submenu {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    background-color: #eee;
+    padding-left: .5rem;
+}
+
+/**************
+Your Formatting
+***************/
+
+header{
+    grid-area: header;
+}
+
+#story{
+    grid-area: story;
+}
+
+#source{
+    grid-area: source;
+}
+
+#extracredit{
+    grid-area: extracredit;
+}
+
+nav{
+    grid-area: nav;
+}
+
+footer{
+    grid-area: footer;
+}
+
+
+
+/*Mobile Grid Layout*/
+@media screen and (max-width: 760px) {
+    #pagegrid {
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px auto auto auto auto 30px;
+        grid-template-areas:
+            "header"
+            "story"
+            "source"
+            "extracredit"
+            "nav"
+            "footer"
+        ;
+    }
+}
