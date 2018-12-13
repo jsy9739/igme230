@@ -79,6 +79,9 @@ header{
     flex-direction: column;
 
     grid-area: extracredit;
+        justify-content: center;
+    align-items: center;
+
 }
 
 nav{
