@@ -12,3 +12,19 @@ $("nav div").click(function () {
 });
 
 
+//$(this).attr("id");
+//
+//$("#content").load(content);
+//
+//$("#choose-content").change(function () {
+//    content = $(this).val();
+//    $("#content").load(content);
+//});
+//var x = 0;
+//$(document).ready(function () {
+//            $("#increment").click(function ()) {
+//                $("#currentcount").load(function (x = x + 1) {
+//
+//                })
+//            };
+//        };

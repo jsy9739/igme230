@@ -75,6 +75,9 @@ header{
 }
 
 #extracredit{
+    display: flex;
+    flex-direction: column;
+
     grid-area: extracredit;
 }
 
@@ -103,7 +106,7 @@ li:hover{
 
 .submenu{
     display: none;
-})
+}
 
 
 
