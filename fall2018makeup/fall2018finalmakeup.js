@@ -20,11 +20,14 @@ $("nav div").click(function () {
 //    content = $(this).val();
 //    $("#content").load(content);
 //});
+
 //var x = 0;
-//$(document).ready(function () {
-//            $("#increment").click(function ()) {
-//                $("#currentcount").load(function (x = x + 1) {
+////$(document).ready(function () {
+////            $("#increment").click(function ()) {
 //
-//                })
-//            };
-//        };
+//$("#currentcount").load(function (x = x + 1{
+//
+//});
+//let increment =
+//
+
